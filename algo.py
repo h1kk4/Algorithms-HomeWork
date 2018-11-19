@@ -38,8 +38,20 @@ def start(argv):
         print (cur_weight,'\t',l)     
         cur_weight+=1
 
+    find_ans(N, money, tab, menu)
 
+def find_ans(i, k, tab, menu):
+    if tab[i][k] == 0:
+        return
+    if tab[i][k] == tab [i-1][k]:
+        find_ans(i-1, k, tab, menu)
+    else:
+        find_ans(i, k - menu[i].p() ,tab, menu)
+        answer.append(i)
+    #answer      
+ 
 
 if __name__ == '__main__':
-
+    answer=[]
     start(sys.argv[1:])
+    print(answer)
