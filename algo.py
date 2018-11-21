@@ -9,6 +9,10 @@ def start(argv):
     money =  int (argv [2])
     menu = menuParser(file_menu)
 
+    promo = promoParser(file_promo)
+
+    # make_additional_menu(menu, promo)
+
     # for keys in menu:
     #   menu[keys].getInfo()
 
