@@ -1,7 +1,7 @@
 import sys
 from menu import Menu
 from parser import *
-import pdb
+# import pdb
 
 def start(argv):
     file_menu = argv[0]
@@ -14,8 +14,8 @@ def start(argv):
 
 
 
-    # for keys in menu:
-    #   menu[keys].getInfo()
+    for keys in menu:
+      menu[keys].getInfo()
 
 
     N = len(menu)
@@ -30,8 +30,8 @@ def start(argv):
             tab [0][i]=0 #fill first column with 0
     for i in range(1, N+1):    
         for k in range(money+1):                                                      
-            if k >= menu[(i)].p():                                              
-                tab[i][k] = max( tab[i - 1][k], tab[i][ k-menu[i].p()] + menu[i].c()) 
+            if k >= menu[(i)].price:                                              
+                tab[i][k] = max( tab[i - 1][k], tab[i][ k-menu[i].price] + menu[i].calories) 
             else:
                 tab[i][k] = tab[i - 1][k] 
 
@@ -49,10 +49,21 @@ def find_ans(i, k, tab, menu):
     if tab[i][k] == tab [i-1][k]:
         find_ans(i-1, k, tab, menu)
     else:
-        find_ans(i, k - menu[i].p() ,tab, menu)
-        answer.append(menu[i].n())
+        find_ans(i, k - menu[i].price ,tab, menu)
+        answer.append(menu[i].name)
     #answer      
  
+
+
+def first_algo(argv):
+    file_menu = argv[0]
+    file_promo = argv [1]
+    menu =  int (argv [2])
+    
+    menu = menuParser(file_menu)
+    promo = promoParser(file_promo)
+
+
 
 if __name__ == '__main__':
     answer=[]

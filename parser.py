@@ -1,9 +1,10 @@
 from menu import Menu
 from promo import Promo, Promo_Menu
+# import pdb
 
 def menuParser (path):
 	file = open(path, 'r')
-	menu =  {}
+	menu = {}
 	i = 1
 	for l in file:
 		name = int(l.split()[0][1:])
@@ -14,11 +15,9 @@ def menuParser (path):
 	return menu
 
 
-
 def promoParser (path):
 	file = open(path, 'r')
-	promo = {}
-	i = 1
+	promo = []
 	for l in file:
 		products = []
 		kind = int(l.split()[0])
@@ -26,17 +25,15 @@ def promoParser (path):
 		discount = int(l.split()[2])
 		for p in products_.split(','):
 			products.append(int(p))
-		promo[i]= Promo(kind, products, discount)
-		i+=1
+		promo.append(Promo(kind, products, discount))
 	return promo
-
 
 
 def make_additional_menu(menu, promo):
 
 	N = len(menu)
 
-	for k, v in promo.items():
+	for v in promo:
 		N+=1
 		if (v.kind==1):
 			names = []
@@ -46,7 +43,7 @@ def make_additional_menu(menu, promo):
 			for i in v.products:
 				names.append(i)
 				price = v.discount
-				calories+=menu[i].c()
+				calories+=menu[i].calories
 			print("names -",names,"price -",price,"calories -",calories)
 			menu[N]=Promo_Menu(names, price, calories)
 		else:
@@ -56,10 +53,10 @@ def make_additional_menu(menu, promo):
 			print('products', v.products)
 			for i in v.products:
 				names.append(i)
-				price+=menu[i].p()
-				calories+=menu[i].c()
+				price+=menu[i].price
+				calories+=menu[i].calories
 			names.append(v.discount)
-			calories+=menu[v.discount].c()
+			calories+=menu[v.discount].calories
 
 			print("names -",names,"price -",price,"calories -",calories)
 			menu[N]=Promo_Menu(names, price, calories)

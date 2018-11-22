@@ -2,19 +2,24 @@
 class Menu(object):
 	"""docstring for Menu"""
 	def __init__(self, name, price, calories):
-		self.price = price
-		self.calories = calories
-		self.name = name
+		self._name = name
+		self._price = price
+		self._calories = calories
 		# print ( "price =",self.price,"calories =", self.calories)
 	
 	def getInfo(self):
-		print ( "name =",self.name, "price =",self.price, "calories =", self.calories)
+		print ( "name =",self._name, "price =",self._price, "calories =", self._calories)
 
-	def p(self):
-		return self.price
+	@property
+	def name(self):
+		return self._name
 
-	def c(self):
-		return self.calories
+	@property
+	def price(self):
+		return self._price
 
-	def n(self):
-		return self.name
+	@property
+	def calories(self):
+		return self._calories
+
+	
