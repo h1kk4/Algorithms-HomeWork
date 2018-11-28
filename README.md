@@ -28,6 +28,8 @@
 $$
 O(NW^{2})
 $$
+
+$\beta$ $\infty$
 ### Неограниченный рюкзак (англ.Unbounded Knapsack Problem) — обобщение ограниченного рюкзака, в котором любой предмет может быть выбран любое количество раз.
 ## Формулировка задачи
 Каждый предмет может быть выбран любое число раз. Задача выбрать количество *x<sub>i</sub>>* предметов каждого типа так, чтобы
@@ -87,5 +89,6 @@ type products discount
 eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
 B6ZXJvXG4gIG1hcmtkb3duOlxuICAgIHRhYmxlOiB0cnVlXG4g
 IGthdGV4OlxuICAgIGVuYWJsZWQ6IHRydWVcbiIsImhpc3Rvcn
-kiOlstNjkzNTU5Mjc0LC03OTY4MTE1NDNdfQ==
+kiOlstMTE0NTgwNDM4NCwtNjkzNTU5Mjc0LC03OTY4MTE1NDNd
+fQ==
 -->
