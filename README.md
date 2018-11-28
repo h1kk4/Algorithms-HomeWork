@@ -7,8 +7,8 @@
 ### Ограниченный рюкзак (англ. Bounded Knapsack Problem) — обобщение классической задачи, когда любой предмет может быть взят некоторое количество раз.
 ## Формулировка задачи
 Каждый предмет может быть выбран ограниченное *b<sub>i</sub>>* число раз. Задача выбрать число *x<sub>i</sub>>* предметов каждого типа так, чтобы
- - максимизировать общую стоимость: <img src="https://latex.codecogs.com/gif.latex?\sum_{i=1}^{N}p_{i}x_{i};" title="\sum_{i=1}^{N}p_{i}x_{i};" />
- - выполнялось условие совместности: <img src="https://latex.codecogs.com/gif.latex?\sum_{i=1}^{N}w_{i}x_{i}\leqW;" title="\sum_{i=1}^{N}w_{i}x_{i}\leqW;" />
+ - максимизировать общую стоимость: <img src="https://latex.codecogs.com/svg.latex?\sum_{i=1}^{N}p_{i}x_{i};" title="\sum_{i=1}^{N}p_{i}x_{i};" />
+ - выполнялось условие совместности: <img src="https://latex.codecogs.com/svg.latex?\sum_{i=1}^{N}w_{i}x_{i}\leqW;" title="\sum_{i=1}^{N}w_{i}x_{i}\leqW;" />
 
 ## Варианты решения	
 - Метод ветвей и границ.
@@ -18,7 +18,7 @@
 Пусть *d(i,c)* максимальная стоимость любого количества вещей типов от 1 до *i* , суммарным весом до *c* включительно.
 Заполним *d(0,c)* нулями.
 Тогда меняя i от 1 до *N* , рассчитаем на каждом шаге *d(i,c)* , для *c* от 1 до *W* , по рекуррентной формуле:
-<img src="https://latex.codecogs.com/gif.latex?d(i,&space;c)=max(d(i-1,c-lw_{i})&plus;lp_{i})" title="d(i, c)=max(d(i-1,c-lw_{i})+lp_{i})" />  по всем целым *l* из промежутка <img src="https://latex.codecogs.com/gif.latex?0\leq&space;l\leq&space;min(b_{i},\left&space;\lfloor&space;c/w_{i}&space;\right&space;\rfloor)" title="0\leq l\leq min(b_{i},\left \lfloor c/w_{i} \right \rfloor)" />
+<img src="https://latex.codecogs.com/svg.latex?d(i,&space;c)=max(d(i-1,c-lw_{i})&plus;lp_{i})" title="d(i, c)=max(d(i-1,c-lw_{i})+lp_{i})" />  по всем целым *l* из промежутка <img src="https://latex.codecogs.com/svg.latex?0\leq&space;l\leq&space;min(b_{i},\left&space;\lfloor&space;c/w_{i}&space;\right&space;\rfloor)" title="0\leq l\leq min(b_{i},\left \lfloor c/w_{i} \right \rfloor)" />
 
 После выполнения в *d(N,W)* будет лежать максимальная стоимость предметов, помещающихся в рюкзак.
 
