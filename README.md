@@ -19,11 +19,11 @@
 Заполним *d(0,c)* нулями.
 Тогда меняя i от 1 до *N* , рассчитаем на каждом шаге *d(i,c)* , для *c* от 1 до *W* , по рекуррентной формуле:
 
-<img src="https://latex.codecogs.com/svg.latex?d(i,&space;c)=max(d(i-1,c-lw_{i})&plus;lp_{i})" title="d(i, c)=max(d(i-1,c-lw_{i})+lp_{i})" />  по всем целым *l* из промежутка <img src="https://latex.codecogs.com/svg.latex?0\leq&space;l\leq&space;min(b_{i},\left&space;\lfloor&space;c/w_{i}&space;\right&space;\rfloor)" title="0\leq l\leq min(b_{i},\left \lfloor c/w_{i} \right \rfloor)" />
+<img src="https://latex.codecogs.com/svg.latex?d(i,&space;c)=max(d(i-1,c-lw_{i})&plus;lp_{i})" title="d(i, c)=max(d(i-1,c-lw_{i})+lp_{i})" />  по всем целым *l* из промежутка <img src="https://latex.codecogs.com/svg.latex?0\leq&space;l\leq&space;min(b_{i},\left&space;\lfloor&space;c/w_{i}&space;\right&space;\rfloor)" title="0\leq l\leq min(b_{i},\left \lfloor c/w_{i} \right \rfloor)" />
 
 После выполнения в *d(N,W)* будет лежать максимальная стоимость предметов, помещающихся в рюкзак.
 
-Сложность алгоритма *O(NW^2)*.
+Сложность алгоритма *O(NW^2^)*.
 
 
 ### Неограниченный рюкзак (англ.Unbounded Knapsack Problem) — обобщение ограниченного рюкзака, в котором любой предмет может быть выбран любое количество раз.
@@ -81,3 +81,6 @@ type products discount
 - Подумать над тем как решить первую задачу через вторую
 - Покрыть все тестами
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTEzMDY1NzIxMl19
+-->
