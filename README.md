@@ -84,5 +84,8 @@ type products discount
 - Покрыть все тестами
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDQ0MzgyNjIsLTc5NjgxMTU0M119
+eyJwcm9wZXJ0aWVzIjoiZXh0ZW5zaW9uczpcbiAgcHJlc2V0Oi
+B6ZXJvXG4gIG1hcmtkb3duOlxuICAgIHRhYmxlOiB0cnVlXG4g
+IGthdGV4OlxuICAgIGVuYWJsZWQ6IHRydWVcbiIsImhpc3Rvcn
+kiOlstNjkzNTU5Mjc0LC03OTY4MTE1NDNdfQ==
 -->
