@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8d97db7b-4c1e-499c-b2ab-f5044f701dbe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algo.py" beforeDir="false" afterPath="$PROJECT_DIR$/algo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML??.eyJmaWxlbmFtZSI6IjExMTExMS5tZCIsImdpc3RJZCI6IjRiNDFjODVkNTljZDVhODg4ZTkzM2M5YWU5MjIxNjdjIiwiaXNQdWJsaWMiOmZhbHNlLCJwcm92aWRlcklkIjoiZ2lzdCIsInN1YiI6IjI1NjIyNTE4IiwidGVtcGxhdGVJZCI6InBsYWluSHRtbCJ9.publish" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML??.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.eyJmaWxlbmFtZSI6IlJFQURNRS5tZCIsImdpc3RJZCI6IjQ0MWUzOTVkMTg1MzI2MmEwMjU3N2Y5MTljNDBjOWVmIiwiaXNQdWJsaWMiOmZhbHNlLCJwcm92aWRlcklkIjoiZ2lzdCIsInN1YiI6IjI1NjIyNTE4IiwidGVtcGxhdGVJZCI6InBsYWluVGV4dCJ9.publish" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.txt" beforeDir="false" afterPath="$PROJECT_DIR$/menu.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/parser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/promo.py" beforeDir="false" afterPath="$PROJECT_DIR$/promo.py" afterDir="false" />
     </list>
@@ -19,7 +20,7 @@
     <session id="-1556674153">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.opened" value="4" />
@@ -27,25 +28,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
+          <entry key="md" value="1" />
+          <entry key="py" value="4" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="2" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+            <state relative-caret-position="30">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -53,8 +56,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+            <state relative-caret-position="435">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/promo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-6" />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/parser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-90">
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,6 +106,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/algo.py" />
+        <option value="$PROJECT_DIR$/menu.py" />
+        <option value="$PROJECT_DIR$/promo.py" />
+        <option value="$PROJECT_DIR$/parser.py" />
       </list>
     </option>
   </component>
@@ -177,9 +213,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="769" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26067746" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26067746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -203,34 +238,47 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/algo.py</url>
-          <line>122</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/algo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/menu.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/algo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/promo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-6" />
+          <second_editor />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
