@@ -4,36 +4,11 @@ from promo import Promo, Promo_Menu
 
 # import pdb
 
-# def menuParser (path, grocery_list = []):
-# 	file = open(path, 'r')
-# 	menu = {}
-# 	i = 1
-# 	if (len(grocery_list) == 0):
-# 		for l in file:
-# 			name = int(l.split()[0][1:])
-# 			price = int(l.split()[1][1:])
-# 			calories = int(l.split()[2][:1])
-# 			menu[i] = Menu(name, price, calories)
-# 			i+=1
-# 	else:
-# 		for l in file:
-# 				name = int(l.split()[0][1:])
-# 				price = int(l.split()[1][1:])
-# 				calories = int(l.split()[2][:1])
-# 				if (name in grocery_list):
-# 					menu[i] = Menu(name, price, calories)
-# 					i+=1
-# 	return menu
-
-
 def menuParser(path, grocery_list={}):
     file = open(path, 'r')
     menu = {}
     i = 1
     for l in file:
-        # name = int(l.split()[0][1:])
-        # price = int(l.split()[1][1:])
-        # calories = int(l.split()[2][:1])
         name, price, calories = tuple(map(lambda x: int(x.strip('#()')), l.split()))
         if (len(grocery_list) == 0):
             count = 1
@@ -52,9 +27,10 @@ def promoParser(path):
     promo = []
     for l in file:
         products = []
-        kind = int(l.split()[0])
-        products_ = l.split()[1]
-        discount = int(l.split()[2])
+        data = l.split()
+        kind = int(data[0])
+        products_ = data[1]
+        discount = int(data[2])
         for p in products_.split(','):
             products.append(int(p))
         promo.append(Promo(kind, products, discount))

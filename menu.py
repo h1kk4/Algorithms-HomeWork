@@ -7,8 +7,6 @@ class Menu(object):
         self._calories = calories
         self._count = count
 
-    # print ( "price =",self.price,"calories =", self.calories)
-
     def getInfo(self):
         print("name =", self._name, "price =", self._price, "calories =", self._calories, "count =", self._count)
 
