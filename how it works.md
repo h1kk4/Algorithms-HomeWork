@@ -34,19 +34,19 @@ def menuParser(path, grocery_list={})
 
 
 ```python
-promoParser(path)
+def promoParser(path)
 ```
 Функция парсит файл с акциями и возвращает массив объектов типа Promo.
 
  
 ```python
-make_additional_menu(menu, promo)
+def make_additional_menu(menu, promo)
 ``` 
 Функция обходит массив с акциями и в зависимости от вида акции составляет новый "продукт" типа Promo_Menu, который будет добавлен в menu.
 
 ```python
-find_ans_1(i, k, tab, menu, needed_calories)
-find_ans_2(i, k, tab, menu):
+def find_ans_1(i, k, tab, menu, needed_calories)
+def find_ans_2(i, k, tab, menu)
 ```
 Обе функции вовзращают список продуктов, которые нужно купить.
 
@@ -56,7 +56,7 @@ find_ans_2(i, k, tab, menu):
 
 
 ```python
-first_algo(menu, promo, grocery_list)
+def first_algo(menu, promo, grocery_list)
 ```
 В функцию передаются меню, акции и список продуктов которые нужно купить.
 
@@ -84,7 +84,7 @@ for i in range(1, N + 1):
 ### Задача о неограниченном рюкзаке.
 
 ```python
-second_algo(menu, promo, money)
+def second_algo(menu, promo, money)
 ```
 В функцию передаются меню, акции и сумма на которую нужно купить продуктов.
 
