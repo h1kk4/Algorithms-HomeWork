@@ -55,7 +55,7 @@ def first_algo(menu, promo, grocery_list):
     for i in range(1, N + 1):
         for k in range(money + 1):
             tab[i][k] = tab[i - 1][k]
-            for l in reversed(range(1, min(menu[i].count, k // menu[i].price) + 1)): #TODO zero price case
+            for l in reversed(range(1, min(menu[i].count, k // menu[i].price) + 1)):
                 tab[i][k] = max(tab[i][k], tab[i - 1][k - l * menu[i].price] + menu[i].calories * l)
 
     cur_weight = 0
