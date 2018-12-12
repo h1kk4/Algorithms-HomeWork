@@ -16,6 +16,7 @@ def menuParser(path, grocery_list={}):
             count = grocery_list[i]
         else:
             count = 0
+            calories = 0
 
         menu[i] = Menu(name, price, calories, count)
         i += 1
@@ -39,7 +40,7 @@ def promoParser(path):
     return promo
 
 
-def make_additional_menu(menu, promo, grocery_list={}):
+def make_additional_menu(menu, promo):
     N = len(menu)
 
     for v in promo:
@@ -71,9 +72,7 @@ def make_additional_menu(menu, promo, grocery_list={}):
 def grocery_list_info(menu, grocery_list):
     money = 0
     needed_calories = 0
-
     for i in grocery_list:
         money += menu[i].price * menu[i].count
-        needed_calories += menu[i].calories * menu[i].count
-
+        needed_calories += menu[i].calories *menu[i].count
     return money, needed_calories

@@ -11,11 +11,11 @@ def start(argv):
     flag_ = argv[2]
     param = argv[3]
     if (flag_ == 'a' or flag_ == 'A'):
-        # grocery_list = collections.Counter(list(map(int, param.split(','))))
-        grocery_list = {}
-        var = list(map(int, param.split(',')))
-        for i in var:
-            grocery_list[i]=var.count(i)
+        grocery_list = collections.Counter(list(map(int, param.split(','))))
+        # grocery_list = list(map(int, param.split(',')))
+        # var = list(map(int, param.split(',')))
+        # for i in var:
+        #     grocery_list[i]=var.count(i)
 
         menu = menuParser(file_menu, grocery_list)
         promo = promoParser(file_promo)
@@ -36,8 +36,8 @@ def start(argv):
 def first_algo(menu, promo, grocery_list):
     money, needed_calories = grocery_list_info(menu, grocery_list)
 
-    print(money, needed_calories)
-    make_additional_menu(menu, promo, grocery_list)
+    print("Money -", money, "needed_calories",needed_calories)
+    make_additional_menu(menu, promo)
 
     for keys in menu:
         menu[keys].getInfo()
@@ -52,19 +52,20 @@ def first_algo(menu, promo, grocery_list):
     for i in range(1, N + 1):
         tab[i][0] = 0  # fill first column with 0
 
-    
     for i in range(1, N + 1):
         for k in range(1, money + 1):
             tab[i][k] = tab[i - 1][k]
             for l in reversed(range(1, min(menu[i].count, k // menu[i].price) + 1)):
                 tab[i][k] = max(tab[i][k], tab[i - 1][k - l * menu[i].price] + menu[i].calories * l)
+
     cur_weight = 0
     for l in tab:
         print(cur_weight, '\t', l)
         cur_weight += 1
 
+    print(k_1,k_2, k_3)
     find_ans_1(N, money, tab, menu, needed_calories)
-
+    # find_ans(N, money, tab, menu)
 
 def second_algo(menu, promo, money):
     make_additional_menu(menu, promo)
@@ -94,40 +95,33 @@ def second_algo(menu, promo, money):
         print(cur_weight, '\t', l)
         cur_weight += 1
 
-    find_ans_2(N, money, tab, menu)
+    find_ans(N, money, tab, menu)
 
 
-def find_ans_2(i, k, tab, menu):
+def find_ans(i, k, tab, menu):
     if tab[i][k] == 0:
         return
     if tab[i][k] == tab[i - 1][k]:
-        find_ans_2(i - 1, k, tab, menu)
+        find_ans(i - 1, k, tab, menu)
     else:
-        find_ans_2(i, k - menu[i].price, tab, menu)
+        find_ans(i, k - menu[i].price, tab, menu)
         answer.append(menu[i].name)
     # answer
 
 
 def find_ans_1(i, k, tab, menu, needed_calories):
-    # if tab[i][k] == 0:
-    #     return
-
-    # if tab[i][k - 1] >= needed_calories:
-    #     find_ans_1(i, k - 1, tab, menu, needed_calories)
-
-    # elif tab[i][k] == tab[i - 1][k]:
-    #     find_ans_1(i - 1, k, tab, menu, needed_calories)
-    # else:
-    #     find_ans_1(i, k - menu[i].price, tab, menu, needed_calories)
-    #     answer.append(menu[i].name)
+    
     if tab[i][k] == 0:
         return
-    if tab[i][k] == tab[i - 1][k]:
-        find_ans_2(i - 1, k, tab, menu)
-    else:
-        find_ans_2(i, k - menu[i].price, tab, menu)
-        answer.append(menu[i].name)
 
+    if tab[i][k - 1] >= needed_calories:
+        find_ans_1(i, k - 1, tab, menu, needed_calories)
+
+    elif tab[i][k] == tab[i - 1][k]:
+        find_ans_1(i - 1, k, tab, menu, needed_calories)
+    else:
+        find_ans_1(i, k - menu[i].price, tab, menu, needed_calories)
+        answer.append(menu[i].name)
 
 if __name__ == '__main__':
     answer = []
